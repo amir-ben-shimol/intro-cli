@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/amir-ben-shimol/intro-cli/blob/main/assets/brand.png" width="350" />
+    <img src="https://github.com/amir-ben-shimol/intro-cli/blob/main/assets/brand.png" width="450" />
 </p>
 
 <p align="center">
