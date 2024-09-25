@@ -1,6 +1,6 @@
 {
 	"name": "intro-cli",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "A customizable onboarding tool that greets users and provides project instructions directly through your CLI after installation",
 	"main": "dist/index.js",
 	"bin": {
