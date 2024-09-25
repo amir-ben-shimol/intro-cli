@@ -1,10 +1,10 @@
 {
 	"name": "intro-cli",
-	"version": "1.0.0",
+	"version": "1.0.5",
 	"description": "A customizable onboarding tool that greets users and provides project instructions directly through your CLI after installation",
 	"main": "dist/index.js",
 	"bin": {
-		"onboarding": "dist/cli.js"
+		"intro": "dist/cli.js"
 	},
 	"author": "Amir Ben Shimol",
 	"license": "ISC",
@@ -31,7 +31,7 @@
 	"scripts": {
 		"husky:install": "husky",
 		"git:config": "git config --local include.path ../.gitconfig",
-		"setdev": "run-p husky:install git:config",
+		"setdev": "run-p husky:install git:config build",
 		"prepare": "pnpm setdev",
 		"build": "tsc --project tsconfig.build.json",
 		"start": "ts-node src/cli.ts",
