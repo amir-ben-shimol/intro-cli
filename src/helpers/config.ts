@@ -13,7 +13,6 @@ export const loadUserConfig = (): Partial<IntroCliConfig> => {
 	const tsConfigPath = resolve(process.cwd(), 'intro.config.ts');
 	const cjsConfigPath = resolve(process.cwd(), 'intro.config.cjs');
 
-	// Register ts-node to handle TypeScript files
 	if (existsSync(tsConfigPath)) {
 		try {
 			register({
