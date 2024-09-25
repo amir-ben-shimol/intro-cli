@@ -37,9 +37,9 @@ npm i -D intro-cli
 
 ## 🛠️ Usage
 
-### Setting Up the Onboarding Script
+### Setting Up the intro Script
 
-1. Add the following `prepare` script to your `package.json` to run the onboarding message automatically after running `npm install`:
+1. Add the following `prepare` script to your `package.json` to run the intro message automatically after running `npm install`:
 
 ```json
 "scripts": {
@@ -47,9 +47,9 @@ npm i -D intro-cli
 }
 ```
 
-This ensures that whenever someone installs the dependencies, the onboarding message will display.
+This ensures that whenever someone installs the dependencies, the intro message will display.
 
-2. After installation, run the following command to manually trigger the onboarding script:
+2. After installation, run the following command to manually trigger the intro script:
 
 ```bash
 npx intro
