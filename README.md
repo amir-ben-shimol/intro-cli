@@ -43,7 +43,7 @@ npm i -D intro-cli
 
 ```json
 "scripts": {
-  "prepare": "npx onboarding"
+  "prepare": "intro"
 }
 ```
 
@@ -52,7 +52,7 @@ This ensures that whenever someone installs the dependencies, the onboarding mes
 2. After installation, run the following command to manually trigger the onboarding script:
 
 ```bash
-npx onboarding
+npx intro
 ```
 
 This will display your welcome message, project rules, and more based on the configuration.
