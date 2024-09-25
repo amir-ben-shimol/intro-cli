@@ -4,6 +4,8 @@ import chalk from 'chalk';
 import { loadUserConfig, validateUserConfig } from './helpers/config';
 import { renderOnboardingMessage } from './helpers/render-onboarding';
 
+chalk.level = 3;
+
 /**
  * run - The main function that handles displaying the onboarding message.
  */
