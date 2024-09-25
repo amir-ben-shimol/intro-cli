@@ -37,7 +37,7 @@ export const loadUserConfig = (): Partial<IntroCliConfig> => {
 		}
 	}
 
-	console.log(chalk.yellow('⚠️ No custom config found. Using default config.'));
+	console.log(chalk.yellow('💡 intro-cli: config file not found'));
 
 	return {};
 };
@@ -48,19 +48,19 @@ export const loadUserConfig = (): Partial<IntroCliConfig> => {
  * @returns {boolean} - True if the configuration is valid, false otherwise.
  */
 export const validateUserConfig = (userConfig: Partial<IntroCliConfig>): boolean => {
-	if (!userConfig.bigTitle || typeof userConfig.bigTitle.label !== 'string') {
+	if (userConfig.bigTitle && typeof userConfig.bigTitle.label !== 'string') {
 		console.error(chalk.red('❌ Error: bigTitle must be a string.'));
 
 		return false;
 	}
 
-	if (!userConfig.welcomeMessage || typeof userConfig.welcomeMessage.label !== 'string') {
+	if (userConfig.welcomeMessage && typeof userConfig.welcomeMessage.label !== 'string') {
 		console.error(chalk.red('❌ Error: welcomeMessage must be a string.'));
 
 		return false;
 	}
 
-	if (!userConfig.rules || !Array.isArray(userConfig.rules) || !userConfig.rules.every((rule) => rule.label && typeof rule.label.label === 'string')) {
+	if (userConfig.rules && (!Array.isArray(userConfig.rules) || !userConfig.rules.every((rule) => rule.label && typeof rule.label.label === 'string'))) {
 		console.error(chalk.red('❌ Error: rules must be an array of valid rule objects.'));
 
 		return false;
