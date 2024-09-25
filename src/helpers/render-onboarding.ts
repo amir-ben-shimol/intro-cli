@@ -78,7 +78,7 @@ const renderRules = (config: Partial<IntroCliConfig>): void => {
 				const emoji = rule.emoji ? `${rule.emoji} ` : '';
 				const styledRule = rule.label.bold ? chalk[rule.label.color].bold(rule.label.label) : chalk[rule.label.color](rule.label.label);
 
-				console.log(`${emoji}${styledRule}`);
+				console.log(`- ${emoji}${styledRule}`);
 			}
 		});
 

@@ -2,6 +2,7 @@
 import { resolve } from 'node:path';
 import { existsSync } from 'node:fs';
 import chalk from 'chalk';
+import { register } from 'ts-node';
 import type { IntroCliConfig } from '../types/config-types';
 
 /**
@@ -12,13 +13,19 @@ export const loadUserConfig = (): Partial<IntroCliConfig> => {
 	const tsConfigPath = resolve(process.cwd(), 'intro.config.ts');
 	const cjsConfigPath = resolve(process.cwd(), 'intro.config.cjs');
 
+	// Register ts-node to handle TypeScript files
 	if (existsSync(tsConfigPath)) {
 		try {
+			register({
+				compilerOptions: {
+					module: 'commonjs',
+				},
+			});
 			const configModule = require(tsConfigPath);
 
 			return configModule.default;
 		} catch (error) {
-			console.error(chalk.red('❌ Error loading TypeScript config.'));
+			console.error(chalk.red('❌ Error loading TypeScript config.', error));
 			process.exit(1);
 		}
 	} else if (existsSync(cjsConfigPath)) {
