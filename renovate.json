@@ -29,7 +29,7 @@
 			"automerge": true
 		}
 	],
-	"ignoreDeps": ["chalk", "figlet"],
+	"ignoreDeps": ["chalk", "figlet", "inquirer"],
 	"commitMessageAction": "🤖 Update",
 	"stabilityDays": 7,
 	"reviewersFromCodeOwners": true,
