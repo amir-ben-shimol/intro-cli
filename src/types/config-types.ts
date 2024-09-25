@@ -50,10 +50,10 @@ export type IntroCliConfig = {
 	 * @property {Color} bigTitle.color - The color of the big title text (options from chalk).
 	 * @property {boolean} bigTitle.bold - Whether the big title should be bold.
 	 */
-	readonly bigTitle: {
+	readonly bigTitle?: {
 		readonly label: string;
 		readonly color: Color;
-		readonly bold: boolean;
+		readonly bold?: boolean;
 	};
 	/**
 	 * @property {Object} welcomeMessage - Configures the welcome message text.
@@ -61,10 +61,10 @@ export type IntroCliConfig = {
 	 * @property {Color} welcomeMessage.color - The color of the welcome message text.
 	 * @property {boolean} welcomeMessage.bold - Whether the welcome message should be bold.
 	 */
-	readonly welcomeMessage: {
+	readonly welcomeMessage?: {
 		readonly label: string;
 		readonly color: Color;
-		readonly bold: boolean;
+		readonly bold?: boolean;
 	};
 	/**
 	 * @property {Object} welcomeDivider - Configures the divider text displayed between sections.
@@ -72,10 +72,10 @@ export type IntroCliConfig = {
 	 * @property {Color} welcomeDivider.color - The color of the divider text.
 	 * @property {boolean} welcomeDivider.bold - Whether the divider text should be bold.
 	 */
-	readonly welcomeDivider: {
+	readonly welcomeDivider?: {
 		readonly label: string;
 		readonly color: Color;
-		readonly bold: boolean;
+		readonly bold?: boolean;
 	};
 	/**
 	 * @property {Object} rulesTitle - Configures the title for the rules section.
@@ -83,10 +83,10 @@ export type IntroCliConfig = {
 	 * @property {Color} rulesTitle.color - The color of the rules title text.
 	 * @property {boolean} rulesTitle.bold - Whether the rules title should be bold.
 	 */
-	readonly rulesTitle: {
+	readonly rulesTitle?: {
 		readonly label: string;
 		readonly color: Color;
-		readonly bold: boolean;
+		readonly bold?: boolean;
 	};
 	/**
 	 * @property {Object[]} rules - An array of objects representing the rules.
@@ -97,12 +97,12 @@ export type IntroCliConfig = {
 	 * @property {Color} rules.label.color - The color of the rule text.
 	 * @property {boolean} rules.label.bold - Whether the rule text should be bold.
 	 */
-	readonly rules: {
+	readonly rules?: {
 		readonly emoji?: string;
 		readonly label: {
 			readonly label: string;
 			readonly color: Color;
-			readonly bold: boolean;
+			readonly bold?: boolean;
 		};
 	}[];
 };
