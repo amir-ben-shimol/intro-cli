@@ -19,7 +19,7 @@
 
 <hr />
 
-# 🚀 Intro CLI
+# 🌈 Intro CLI
 
 ✨ **intro-cli** is a fully customizable CLI tool that helps onboard developers by displaying project guidelines, rules, and instructions when running a specific command. It allows users to define a welcome message, title, rules, and more directly in a config file.
 
