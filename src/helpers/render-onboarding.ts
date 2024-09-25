@@ -1,9 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 import chalk from 'chalk';
 import type { IntroCliConfig } from '../types/config-types';
 
 const figlet = require('figlet');
+
+const FALLBACK_TITLE_COLOR = 'blue';
+const FALLBACK_DIVIDER_COLOR = 'yellowBright';
+const FALLBACK_RULES_TITLE_COLOR = 'cyan';
+const FALLBACK_RULE_COLOR = 'magentaBright';
 
 /**
  * renderOnboardingMessage - Renders the onboarding message based on the user config.
@@ -12,14 +16,10 @@ const figlet = require('figlet');
  */
 export const renderOnboardingMessage = (config: Partial<IntroCliConfig>): void => {
 	if (config.bigTitle && config.bigTitle.label) {
-		figlet(config.bigTitle.label, (err: any, figletText: any) => {
-			if (err) {
-				console.error(chalk.redBright('Error rendering big title.'));
-
-				return;
-			}
-
-			const styledTitle = config.bigTitle?.bold ? chalk[config.bigTitle.color].bold(figletText) : chalk[config.bigTitle?.color ?? 'blue'](figletText);
+		figlet(config.bigTitle.label, (_: unknown, figletText: string) => {
+			const styledTitle = config.bigTitle?.bold
+				? chalk[config.bigTitle?.color ?? FALLBACK_TITLE_COLOR].bold(figletText)
+				: chalk[config.bigTitle?.color ?? FALLBACK_TITLE_COLOR](figletText);
 
 			console.log(styledTitle);
 
@@ -40,8 +40,8 @@ export const renderOnboardingMessage = (config: Partial<IntroCliConfig>): void =
 const renderWelcomeMessage = (config: Partial<IntroCliConfig>): void => {
 	if (config.welcomeMessage && config.welcomeMessage.label) {
 		const styledWelcomeMessage = config.welcomeMessage.bold
-			? chalk[config.welcomeMessage.color].bold(config.welcomeMessage.label)
-			: chalk[config.welcomeMessage.color](config.welcomeMessage.label);
+			? chalk[config.welcomeMessage?.color ?? FALLBACK_TITLE_COLOR].bold(config.welcomeMessage.label)
+			: chalk[config.welcomeMessage?.color ?? FALLBACK_TITLE_COLOR](config.welcomeMessage.label);
 
 		console.log(`\n${styledWelcomeMessage}`);
 	}
@@ -53,8 +53,8 @@ const renderWelcomeMessage = (config: Partial<IntroCliConfig>): void => {
 const renderDivider = (config: Partial<IntroCliConfig>): void => {
 	if (config.welcomeDivider && config.welcomeDivider.label) {
 		const styledDivider = config.welcomeDivider.bold
-			? chalk[config.welcomeDivider.color].bold(config.welcomeDivider.label)
-			: chalk[config.welcomeDivider.color](config.welcomeDivider.label);
+			? chalk[config.welcomeDivider?.color ?? FALLBACK_DIVIDER_COLOR].bold(config.welcomeDivider.label)
+			: chalk[config.welcomeDivider?.color ?? FALLBACK_DIVIDER_COLOR](config.welcomeDivider.label);
 
 		console.log(`\n${styledDivider}\n`);
 	}
@@ -66,8 +66,8 @@ const renderDivider = (config: Partial<IntroCliConfig>): void => {
 const renderRules = (config: Partial<IntroCliConfig>): void => {
 	if (config.rulesTitle && config.rulesTitle.label) {
 		const styledRulesTitle = config.rulesTitle.bold
-			? chalk[config.rulesTitle.color].bold(config.rulesTitle.label)
-			: chalk[config.rulesTitle.color](config.rulesTitle.label);
+			? chalk[config.rulesTitle?.color ?? FALLBACK_RULES_TITLE_COLOR].bold(config.rulesTitle.label)
+			: chalk[config.rulesTitle?.color ?? FALLBACK_RULES_TITLE_COLOR](config.rulesTitle.label);
 
 		console.log(styledRulesTitle);
 	}
@@ -76,7 +76,10 @@ const renderRules = (config: Partial<IntroCliConfig>): void => {
 		config.rules.forEach((rule) => {
 			if (rule.label && rule.label.label) {
 				const emoji = rule.emoji ? `${rule.emoji} ` : '';
-				const styledRule = rule.label.bold ? chalk[rule.label.color].bold(rule.label.label) : chalk[rule.label.color](rule.label.label);
+
+				const styledRule = rule.label.bold
+					? chalk[rule.label?.color ?? FALLBACK_RULE_COLOR].bold(rule.label.label)
+					: chalk[rule.label?.color ?? FALLBACK_RULE_COLOR](rule.label.label);
 
 				console.log(`- ${emoji}${styledRule}`);
 			}

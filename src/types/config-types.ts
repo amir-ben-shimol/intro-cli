@@ -52,7 +52,7 @@ export type IntroCliConfig = {
 	 */
 	readonly bigTitle?: {
 		readonly label: string;
-		readonly color: Color;
+		readonly color?: Color;
 		readonly bold?: boolean;
 	};
 	/**
@@ -63,7 +63,7 @@ export type IntroCliConfig = {
 	 */
 	readonly welcomeMessage?: {
 		readonly label: string;
-		readonly color: Color;
+		readonly color?: Color;
 		readonly bold?: boolean;
 	};
 	/**
@@ -74,7 +74,7 @@ export type IntroCliConfig = {
 	 */
 	readonly welcomeDivider?: {
 		readonly label: string;
-		readonly color: Color;
+		readonly color?: Color;
 		readonly bold?: boolean;
 	};
 	/**
@@ -85,7 +85,7 @@ export type IntroCliConfig = {
 	 */
 	readonly rulesTitle?: {
 		readonly label: string;
-		readonly color: Color;
+		readonly color?: Color;
 		readonly bold?: boolean;
 	};
 	/**
@@ -101,7 +101,7 @@ export type IntroCliConfig = {
 		readonly emoji?: string;
 		readonly label: {
 			readonly label: string;
-			readonly color: Color;
+			readonly color?: Color;
 			readonly bold?: boolean;
 		};
 	}[];
