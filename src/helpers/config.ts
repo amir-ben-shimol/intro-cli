@@ -45,7 +45,7 @@ export const loadUserConfig = (): Partial<IntroCliConfig> => {
 /**
  * validateUserConfig - Validates the user's configuration to ensure it follows the structure.
  * @param {Partial<IntroCliConfig>} userConfig - The user's configuration.
- * @returns {boolean} - True if the configuration is valid, false otherwise.
+ * @returns {boolean} - True if the configuration is valid, false otherwise
  */
 export const validateUserConfig = (userConfig: Partial<IntroCliConfig>): boolean => {
 	if (userConfig.bigTitle && typeof userConfig.bigTitle.label !== 'string') {
