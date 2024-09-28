@@ -62,7 +62,13 @@ This will display your welcome message, project rules, and more based on the con
 If configured with a big title, welcome message, and rules, it could look like this:
 
 ```bash
-My Awesome Project
+  __  __            _                                           ____            _           _
+ |  \/  |_   _     / \__      _____  ___  ___  _ __ ___   ___  |  _ \ _ __ ___ (_) ___  ___| |_
+ | |\/| | | | |   / _ \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ | |_) | '__/ _ \| |/ _ \/ __| __|
+ | |  | | |_| |  / ___ \ V  V /  __/\__ \ (_) | | | | | |  __/ |  __/| | | (_) | |  __/ (__| |_
+ |_|  |_|\__, | /_/   \_\_/\_/ \___||___/\___/|_| |_| |_|\___| |_|   |_|  \___// |\___|\___|\__|
+         |___/                                                               |__/
+
 Welcome to My Awesome Project! Get ready to contribute 🚀
 
 🎉✨🎉✨🎉✨🎉✨🎉✨
