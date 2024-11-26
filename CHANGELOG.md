@@ -1,3 +1,5 @@
+# [1.9.0](https://github.com/amir-ben-shimol/intro-cli/compare/v1.8.0...v1.9.0) (2024-11-26)
+
 # [1.8.0](https://github.com/amir-ben-shimol/intro-cli/compare/v1.7.0...v1.8.0) (2024-10-02)
 
 # [1.7.0](https://github.com/amir-ben-shimol/intro-cli/compare/v1.6.0...v1.7.0) (2024-10-01)
