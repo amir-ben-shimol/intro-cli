@@ -34,8 +34,8 @@ importers:
         specifier: 7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.6.2)
       cnb:
-        specifier: 1.2.3
-        version: 1.2.3
+        specifier: 1.2.4
+        version: 1.2.4
       commitizen:
         specifier: 4.3.0
         version: 4.3.0(@types/node@22.6.1)(typescript@5.6.2)
@@ -1020,8 +1020,8 @@ packages:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
 
-  cnb@1.2.3:
-    resolution: {integrity: sha512-IQgNU0XvGTN+TDqnoutgbeG+OdNoy6gMeIIL1sCXTecgw9Tzx7w5utktrOHIGdKJsCESWfh0ZCHI1ClfycRSWA==}
+  cnb@1.2.4:
+    resolution: {integrity: sha512-CEB2NRLzKNxLgLQYW0X7BQ2ql5Yzv/JqWmXGZYNJPPq8DWclUhUo9VClsy5qEjOEa/XYkeB4XmWfgEfQCtPpVA==}
     engines: {node: '>=20', pnpm: '>=9', yarn: please-use-pnpm}
     hasBin: true
 
@@ -4396,7 +4396,7 @@ snapshots:
 
   clone@1.0.4: {}
 
-  cnb@1.2.3:
+  cnb@1.2.4:
     dependencies:
       '@types/node': 22.5.5
       chalk: 4.1.2
