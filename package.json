@@ -1,13 +1,13 @@
 {
 	"name": "intro-cli",
-	"version": "1.1.2",
+	"version": "1.1.4",
 	"description": "A customizable onboarding tool that greets users and provides project instructions directly through your CLI after installation",
+	"author": "Mr. Amir Ben Shimol <amir.benshi@gmail.com> (https://amirbenshimol.com/)",
+	"license": "MIT",
 	"main": "dist/index.js",
 	"bin": {
 		"intro": "dist/cli.js"
 	},
-	"author": "Amir Ben Shimol",
-	"license": "ISC",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/amir-ben-shimol/intro-cli"
@@ -44,7 +44,8 @@
 	},
 	"dependencies": {
 		"chalk": "4.1.2",
-		"figlet": "1.7.0"
+		"figlet": "1.7.0",
+		"ts-node": "10.9.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "19.5.0",
@@ -74,7 +75,6 @@
 		"prettier-plugin-sh": "0.14.0",
 		"ts-jest": "29.2.5",
 		"ts-mock-api": "1.0.13",
-		"ts-node": "10.9.2",
 		"typescript": "5.6.2"
 	},
 	"packageManager": "pnpm@9.11.0",
